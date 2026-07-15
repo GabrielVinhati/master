@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Impulso | Estratégia, Expansão Comercial e Trade Marketing</title>
+  <meta name="description" content="A Master Impulso conecta consultoria estratégica, representação comercial e trade marketing para apoiar empresas que buscam crescimento com mais direção, presença de mercado e eficiência na execução.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              50: '#e8ecf2',
+              100: '#c5cfe0',
+              200: '#9eafcc',
+              300: '#778fb8',
+              400: '#5977a8',
+              500: '#3b5f99',
+              600: '#2d4a78',
+              700: '#1f365a',
+              800: '#1B2A4A',
+              900: '#111c33',
+              950: '#0a1120',
+            },
+            gold: {
+              50: '#fef9ec',
+              100: '#fdf0c8',
+              200: '#fbe18d',
+              300: '#F0B731',
+              400: '#e5a31e',
+              500: '#d49212',
+              600: '#b0730d',
+              700: '#8a560e',
+              800: '#724512',
+              900: '#613a14',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            heading: ['Outfit', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', system-ui, sans-serif; }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #1B2A4A; }
+    ::-webkit-scrollbar-thumb { background: #F0B731; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #e5a31e; }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #1B2A4A 0%, #111c33 40%, #1B2A4A 70%, #0a1120 100%);
+      position: relative;
+    }
+    .hero-gradient::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 20%, rgba(240, 183, 49, 0.08) 0%, transparent 60%),
+                  radial-gradient(ellipse at 20% 80%, rgba(59, 95, 153, 0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute; width: 4px; height: 4px;
+      background: rgba(240, 183, 49, 0.3); border-radius: 50%;
+      animation: float-particle 8s ease-in-out infinite;
+    }
+    .particle:nth-child(2) { animation-delay: -2s; animation-duration: 10s; }
+    .particle:nth-child(3) { animation-delay: -4s; animation-duration: 12s; }
+    .particle:nth-child(4) { animation-delay: -1s; animation-duration: 9s; }
+    .particle:nth-child(5) { animation-delay: -3s; animation-duration: 11s; }
+    @keyframes float-particle {
+      0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+      25% { transform: translateY(-30px) translateX(15px); opacity: 0.7; }
+      50% { transform: translateY(-15px) translateX(-10px); opacity: 0.5; }
+      75% { transform: translateY(-40px) translateX(20px); opacity: 0.8; }
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(240, 183, 49, 0.3);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(240, 183, 49, 0.05);
+    }
+
+    .white-glass {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(27, 42, 74, 0.08);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .white-glass:hover {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: rgba(240, 183, 49, 0.4);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(27, 42, 74, 0.1);
+    }
+
+    .gold-line { width: 60px; height: 4px; background: linear-gradient(90deg, #F0B731, #e5a31e); border-radius: 2px; }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(27, 42, 74, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(27, 42, 74, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .icon-container {
+      width: 56px; height: 56px; display: flex; align-items: center; justify-content: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(240, 183, 49, 0.1), rgba(240, 183, 49, 0.05));
+      border: 1px solid rgba(240, 183, 49, 0.2); flex-shrink: 0;
+    }
+
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -4px; left: 50%;
+      width: 0; height: 2px; background: #F0B731;
+      transition: all 0.3s ease; transform: translateX(-50%);
+    }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+    .pulse-gold { animation: pulse-gold 2s ease-in-out infinite; }
+    @keyframes pulse-gold {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(240, 183, 49, 0.4); }
+      50% { box-shadow: 0 0 0 12px rgba(240, 183, 49, 0); }
+    }
+
+    .mobile-menu { transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .mobile-menu.open { transform: translateX(0); }
+
+    .scroll-indicator { animation: scroll-bounce 2s ease-in-out infinite; }
+    @keyframes scroll-bounce {
+      0%, 100% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(10px); opacity: 0.5; }
+    }
+
+    .whatsapp-float {
+      position: fixed; bottom: 24px; right: 24px; z-index: 999;
+      animation: float-btn 3s ease-in-out infinite;
+    }
+    @keyframes float-btn { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+    .navbar-scrolled {
+      background: rgba(27, 42, 74, 0.95) !important;
+      backdrop-filter: blur(20px) !important; -webkit-backdrop-filter: blur(20px) !important;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-navy-800 font-sans antialiased">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="img/logo.png" alt="Master Impulso" class="h-14 w-auto transition-transform duration-300 group-hover:scale-105">
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link active text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors">Home</a>
+          <a href="quem-somos.html" class="nav-link text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors">Quem Somos</a>
+          <a href="solucoes.html" class="nav-link text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors">Soluções</a>
+          <a href="clientes.html" class="nav-link text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors">Clientes</a>
+          <a href="contato.html" class="inline-flex items-center gap-2 bg-gold-300 hover:bg-gold-400 text-navy-800 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-gold-300/20">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            Contato
+          </a>
+        </div>
+        <button id="mobile-menu-btn" class="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Menu">
+          <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-screen w-80 bg-navy-800/98 backdrop-blur-xl z-50 lg:hidden">
+      <div class="flex flex-col p-8 h-full">
+        <div class="flex justify-end mb-10">
+          <button id="mobile-close-btn" class="text-white/70 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Fechar menu">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+        <div class="flex flex-col gap-6">
+          <a href="index.html" class="mobile-nav-link text-gold-300 text-lg font-medium transition-colors">Home</a>
+          <a href="quem-somos.html" class="mobile-nav-link text-white/80 hover:text-gold-300 text-lg font-medium transition-colors">Quem Somos</a>
+          <a href="solucoes.html" class="mobile-nav-link text-white/80 hover:text-gold-300 text-lg font-medium transition-colors">Soluções</a>
+          <a href="clientes.html" class="mobile-nav-link text-white/80 hover:text-gold-300 text-lg font-medium transition-colors">Clientes</a>
+          <div class="mt-4 pt-6 border-t border-white/10">
+            <a href="contato.html" class="mobile-nav-link inline-flex items-center gap-2 bg-gold-300 hover:bg-gold-400 text-navy-800 px-6 py-3 rounded-lg font-semibold transition-all">
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+              Fale Conosco
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden" aria-hidden="true"></div>
+  </nav>
+
+
+  <!-- ========== HERO ========== -->
+  <section id="home" class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+    <div class="particle" style="top: 15%; left: 10%;"></div>
+    <div class="particle" style="top: 40%; left: 80%;"></div>
+    <div class="particle" style="top: 70%; left: 25%;"></div>
+    <div class="particle" style="top: 25%; left: 60%;"></div>
+    <div class="particle" style="top: 80%; left: 75%;"></div>
+    <div class="absolute top-20 right-0 w-96 h-96 bg-gold-300/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-0 w-80 h-80 bg-navy-500/20 rounded-full blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div data-aos="fade-right" data-aos-duration="1000">
+          <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-8">
+            <span class="w-2 h-2 bg-gold-300 rounded-full animate-pulse"></span>
+            <span class="text-white/70 text-xs font-medium tracking-wider uppercase">Consultoria · Representação · Trade</span>
+          </div>
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            Estratégia, expansão comercial e execução para
+            <span class="text-gold-300">empresas que querem crescer</span> com estrutura.
+          </h1>
+          <p class="text-white/60 text-lg leading-relaxed mb-10 max-w-xl">
+            A Master Impulso conecta consultoria estratégica, representação comercial e trade marketing para apoiar empresas que buscam crescimento com mais direção, presença de mercado e eficiência na execução.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://wa.me/" target="_blank" class="pulse-gold inline-flex items-center justify-center gap-2 bg-gold-300 hover:bg-gold-400 text-navy-800 px-8 py-4 rounded-xl text-base font-bold transition-all duration-300 hover:shadow-xl hover:shadow-gold-300/30 hover:-translate-y-1">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Falar pelo WhatsApp
+            </a>
+            <a href="quem-somos.html" class="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-xl text-base font-medium transition-all duration-300 hover:bg-white/5 hover:-translate-y-1">
+              Conheça a Master
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" class="relative">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/30">
+            <img src="img/image.png" alt="Master Impulso - Identidade Visual" class="w-full h-auto object-cover rounded-2xl">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-800/40 to-transparent rounded-2xl"></div>
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-gold-300 text-navy-800 rounded-xl px-5 py-3 shadow-xl shadow-gold-300/20" data-aos="zoom-in" data-aos-delay="600">
+            <p class="text-xs font-semibold uppercase tracking-wider">Atuação</p>
+            <p class="text-lg font-bold">Nacional</p>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator">
+        <i data-lucide="chevrons-down" class="w-6 h-6 text-white/30"></i>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== O QUE FAZEMOS ========== -->
+  <section class="bg-white py-24 lg:py-32 grid-bg relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div class="gold-line mx-auto mb-6"></div>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-800 mb-4">O que fazemos</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <a href="solucoes.html#consultoria" class="white-glass rounded-2xl p-8 group block" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon-container mb-6 group-hover:bg-gold-300/20 transition-colors">
+            <i data-lucide="lightbulb" class="w-6 h-6 text-gold-300"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-navy-800 mb-3">Consultoria Estratégica</h3>
+          <p class="text-navy-600 leading-relaxed text-sm">Diagnóstico, planejamento e estruturação comercial para empresas que precisam crescer com mais clareza e previsibilidade.</p>
+          <div class="mt-6 flex items-center gap-2 text-gold-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+            <span>Saiba mais</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <a href="solucoes.html#representacao" class="white-glass rounded-2xl p-8 group block" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon-container mb-6 group-hover:bg-gold-300/20 transition-colors">
+            <i data-lucide="handshake" class="w-6 h-6 text-gold-300"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-navy-800 mb-3">Representação Comercial</h3>
+          <p class="text-navy-600 leading-relaxed text-sm">Desenvolvimento de mercado, abertura de oportunidades e fortalecimento de relacionamentos comerciais.</p>
+          <div class="mt-6 flex items-center gap-2 text-gold-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+            <span>Saiba mais</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </div>
+        </a>
+        <a href="solucoes.html#trade" class="white-glass rounded-2xl p-8 group block" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon-container mb-6 group-hover:bg-gold-300/20 transition-colors">
+            <i data-lucide="store" class="w-6 h-6 text-gold-300"></i>
+          </div>
+          <h3 class="font-heading text-xl font-bold text-navy-800 mb-3">Trade Marketing</h3>
+          <p class="text-navy-600 leading-relaxed text-sm">Execução no ponto de venda com foco em visibilidade, disponibilidade, organização e performance.</p>
+          <div class="mt-6 flex items-center gap-2 text-gold-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+            <span>Saiba mais</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CRESCIMENTO EXIGE CONEXÃO ========== -->
+  <section class="bg-navy-800 py-24 lg:py-32 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-300/30 to-transparent"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(240,183,49,0.04),transparent_70%)]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div data-aos="fade-right">
+          <div class="gold-line mb-6"></div>
+          <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+            Crescimento exige conexão entre <span class="text-gold-300">estratégia e execução</span>
+          </h2>
+          <p class="text-white/60 text-lg leading-relaxed mb-8">
+            Muitas empresas possuem bons produtos e potencial de mercado, mas enfrentam dificuldades para transformar esse potencial em resultado.
+          </p>
+          <p class="text-white/50 leading-relaxed">
+            A Master Impulso atua para aproximar planejamento, desenvolvimento comercial e execução prática, criando uma operação mais alinhada, estratégica e sustentável.
+          </p>
+        </div>
+        <div data-aos="fade-left" data-aos-delay="200">
+          <div class="relative rounded-2xl overflow-hidden">
+            <img src="img/image copy.png" alt="Master Impulso - Materiais" class="w-full h-auto object-cover rounded-2xl shadow-2xl shadow-black/40">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900/50 to-transparent rounded-2xl"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== POR QUE A MASTER IMPULSO ========== -->
+  <section class="bg-white py-24 lg:py-32 grid-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div class="gold-line mx-auto mb-6"></div>
+        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-800 mb-4">Por que a Master Impulso?</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
+        <div class="flex items-start gap-4 p-6 rounded-xl hover:bg-navy-50/50 transition-colors" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-10 h-10 bg-gold-300/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i data-lucide="factory" class="w-5 h-5 text-gold-400"></i>
+          </div>
+          <p class="text-navy-700 font-medium">Experiência em indústria e varejo</p>
+        </div>
+        <div class="flex items-start gap-4 p-6 rounded-xl hover:bg-navy-50/50 transition-colors" data-aos="fade-up" data-aos-delay="150">
+          <div class="w-10 h-10 bg-gold-300/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i data-lucide="layers" class="w-5 h-5 text-gold-400"></i>
+          </div>
+          <p class="text-navy-700 font-medium">Atuação integrada entre estratégia, vendas e execução</p>
+        </div>
+        <div class="flex items-start gap-4 p-6 rounded-xl hover:bg-navy-50/50 transition-colors" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-10 h-10 bg-gold-300/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i data-lucide="bar-chart-3" class="w-5 h-5 text-gold-400"></i>
+          </div>
+          <p class="text-navy-700 font-medium">Operação orientada por indicadores</p>
+        </div>
+        <div class="flex items-start gap-4 p-6 rounded-xl hover:bg-navy-50/50 transition-colors" data-aos="fade-up" data-aos-delay="250">
+          <div class="w-10 h-10 bg-gold-300/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i data-lucide="users" class="w-5 h-5 text-gold-400"></i>
+          </div>
+          <p class="text-navy-700 font-medium">Relacionamento próximo com o mercado</p>
+        </div>
+        <div class="flex items-start gap-4 p-6 rounded-xl hover:bg-navy-50/50 transition-colors" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-10 h-10 bg-gold-300/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <i data-lucide="trending-up" class="w-5 h-5 text-gold-400"></i>
+          </div>
+          <p class="text-navy-700 font-medium">Foco em crescimento estruturado</p>
+        </div>
+      </div>
+
+      <!-- CTA Block -->
+      <div class="bg-navy-800 rounded-3xl p-10 lg:p-16 text-center relative overflow-hidden" data-aos="zoom-in">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(240,183,49,0.08),transparent_60%)]"></div>
+        <div class="relative z-10">
+          <h3 class="font-heading text-2xl sm:text-3xl font-bold text-white mb-4">Conheça melhor a Master Impulso</h3>
+          <p class="text-white/60 max-w-xl mx-auto mb-8">Entenda como nossas soluções podem apoiar sua empresa em estratégia, expansão comercial e trade marketing.</p>
+          <a href="https://wa.me/" target="_blank" class="pulse-gold inline-flex items-center gap-3 bg-gold-300 hover:bg-gold-400 text-navy-800 px-8 py-4 rounded-xl text-base font-bold transition-all duration-300 hover:shadow-xl hover:shadow-gold-300/30 hover:-translate-y-1">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Falar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-navy-900 pt-16 pb-8 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-300/20 to-transparent"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <div>
+          <img src="img/logo.png" alt="Master Impulso" class="h-16 w-auto mb-6">
+          <p class="text-white/40 text-sm leading-relaxed">
+            Estratégia, expansão comercial e trade marketing para empresas que buscam crescer com mais estrutura.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-6">Menu</h4>
+          <nav class="flex flex-col gap-3">
+            <a href="index.html" class="text-white/40 hover:text-gold-300 text-sm transition-colors">Home</a>
+            <a href="quem-somos.html" class="text-white/40 hover:text-gold-300 text-sm transition-colors">Quem Somos</a>
+            <a href="solucoes.html" class="text-white/40 hover:text-gold-300 text-sm transition-colors">Soluções</a>
+            <a href="clientes.html" class="text-white/40 hover:text-gold-300 text-sm transition-colors">Clientes</a>
+            <a href="contato.html" class="text-white/40 hover:text-gold-300 text-sm transition-colors">Contato</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-6">Contato</h4>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <svg class="w-4 h-4 text-gold-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              <p class="text-white/40 text-sm">WhatsApp: inserir número</p>
+            </div>
+            <div class="flex items-center gap-3">
+              <i data-lucide="mail" class="w-4 h-4 text-gold-300 flex-shrink-0"></i>
+              <p class="text-white/40 text-sm">E-mail: inserir e-mail</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-white/30 text-xs">© 2026 Master Impulso. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-white/30 hover:text-gold-300 transition-colors" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="#" class="text-white/30 hover:text-gold-300 transition-colors" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+          <a href="#" class="text-white/30 hover:text-gold-300 transition-colors" aria-label="Facebook"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/" target="_blank" class="whatsapp-float w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 transition-colors" aria-label="WhatsApp">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
+    lucide.createIcons();
+
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('navbar-scrolled', window.scrollY > 80);
+    });
+
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileCloseBtn = document.getElementById('mobile-close-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileOverlay = document.getElementById('mobile-overlay');
+
+    function openMobileMenu() { mobileMenu.classList.add('open'); mobileOverlay.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+    function closeMobileMenu() { mobileMenu.classList.remove('open'); mobileOverlay.classList.add('hidden'); document.body.style.overflow = ''; }
+
+    mobileMenuBtn.addEventListener('click', openMobileMenu);
+    mobileCloseBtn.addEventListener('click', closeMobileMenu);
+    mobileOverlay.addEventListener('click', closeMobileMenu);
+    document.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', closeMobileMenu));
+
+    window.addEventListener('scroll', () => {
+      const hero = document.getElementById('home');
+      if (hero) {
+        const scrolled = window.scrollY;
+        hero.querySelectorAll('.particle').forEach((p, i) => { p.style.transform = `translateY(${scrolled * (0.2 + i * 0.05)}px)`; });
+      }
+    });
+  </script>
+</body>
+</html>
