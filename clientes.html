@@ -15,21 +15,30 @@
             navy: { 50:'#e8ecf2',100:'#c5cfe0',200:'#9eafcc',300:'#778fb8',400:'#5977a8',500:'#3b5f99',600:'#2d4a78',700:'#1f365a',800:'#1B2A4A',900:'#111c33',950:'#0a1120' },
             gold: { 50:'#fef9ec',100:'#fdf0c8',200:'#fbe18d',300:'#F0B731',400:'#e5a31e',500:'#d49212',600:'#b0730d',700:'#8a560e',800:'#724512',900:'#613a14' },
           },
-          fontFamily: { sans:['Inter','system-ui','sans-serif'], heading:['Outfit','system-ui','sans-serif'] },
+          fontFamily: { sans:['Space Grotesk','system-ui','sans-serif'], heading:['Space Grotesk','system-ui','sans-serif'] },
         },
       },
     }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', system-ui, sans-serif; overflow-x: hidden; }
-    h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', system-ui, sans-serif; }
+    body { font-family: 'Space Grotesk', system-ui, sans-serif; overflow-x: hidden; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', system-ui, sans-serif; }
+
+    .detail-text {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      letter-spacing: 0.18em;
+      transform: scaleX(1.08);
+      transform-origin: left;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: #1B2A4A; }
     ::-webkit-scrollbar-thumb { background: #F0B731; border-radius: 4px; }
@@ -54,7 +63,7 @@
     .whatsapp-float { position: fixed; bottom: 24px; right: 24px; z-index: 999; animation: float-btn 3s ease-in-out infinite; }
     @keyframes float-btn { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 
-    .navbar-scrolled { background: rgba(27,42,74,0.95) !important; backdrop-filter: blur(20px) !important; -webkit-backdrop-filter: blur(20px) !important; box-shadow: 0 4px 30px rgba(0,0,0,0.2); }
+    .navbar-scrolled { background: rgba(27,42,74,0.6) !important; backdrop-filter: blur(24px) saturate(180%) !important; -webkit-backdrop-filter: blur(24px) saturate(180%) !important; border-bottom: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.18); }
 
     .page-hero { background: linear-gradient(135deg, #1B2A4A 0%, #0a1120 100%); position: relative; overflow: hidden; }
     .page-hero::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse at 70% 30%, rgba(240,183,49,0.06) 0%, transparent 60%); pointer-events:none; }
@@ -68,7 +77,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <a href="index.html" class="flex items-center gap-3 group">
-          <img src="img/logo.png" alt="Master Impulso" class="h-14 w-auto transition-transform duration-300 group-hover:scale-105">
+          <img src="img/image copy 2.png" alt="Master Impulso" class="h-14 w-auto transition-transform duration-300 group-hover:scale-105">
         </a>
         <div class="hidden lg:flex items-center gap-8">
           <a href="index.html" class="nav-link text-white/80 hover:text-white text-sm font-medium tracking-wide transition-colors">Home</a>
@@ -108,15 +117,15 @@
   <section class="page-hero pt-32 pb-20 relative">
     <div class="absolute top-20 right-0 w-96 h-96 bg-gold-300/5 rounded-full blur-3xl"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div data-aos="fade-up">
+      <div data-aos="fade-up" class="text-center">
         <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-6">
           <span class="w-2 h-2 bg-gold-300 rounded-full animate-pulse"></span>
-          <span class="text-white/70 text-xs font-medium tracking-wider uppercase">Clientes & Portfólio</span>
+          <span class="detail-text text-white/70 text-xs">Clientes & Portfólio</span>
         </div>
         <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
           Empresas que crescem com a <span class="text-gold-300">Master Impulso</span>
         </h1>
-        <p class="text-white/60 text-lg max-w-3xl leading-relaxed">
+        <p class="text-white/60 text-lg max-w-3xl mx-auto leading-relaxed">
           A Master Impulso atua ao lado de empresas que buscam mais estratégia, expansão comercial e eficiência na execução.
         </p>
       </div>
@@ -220,7 +229,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-3 gap-12 mb-12">
         <div>
-          <img src="img/logo.png" alt="Master Impulso" class="h-16 w-auto mb-6">
+          <img src="img/image copy 2.png" alt="Master Impulso" class="h-16 w-auto mb-6">
           <p class="text-white/40 text-sm leading-relaxed">Estratégia, expansão comercial e trade marketing para empresas que buscam crescer com mais estrutura.</p>
         </div>
         <div>
