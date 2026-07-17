@@ -35,7 +35,7 @@
       font-family: 'Space Grotesk', system-ui, sans-serif;
       letter-spacing: 0.18em;
       transform: scaleX(1.08);
-      transform-origin: left;
+      transform-origin: center;
       text-transform: uppercase;
       font-weight: 500;
     }
@@ -60,7 +60,7 @@
     .nav-link::after { content:''; position:absolute; bottom:-4px; left:50%; width:0; height:2px; background:#F0B731; transition: all 0.3s ease; transform: translateX(-50%); }
     .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
-    .mobile-menu { transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); }
+    .mobile-menu { transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); background: #1B2A4A !important; }
     .mobile-menu.open { transform: translateX(0); }
 
     .whatsapp-float { position: fixed; bottom: 24px; right: 24px; z-index: 999; animation: float-btn 3s ease-in-out infinite; }
@@ -118,24 +118,26 @@
         </button>
       </div>
     </div>
-    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-screen w-80 bg-navy-800/98 backdrop-blur-xl z-50 lg:hidden">
-      <div class="flex flex-col p-8 h-full">
-        <div class="flex justify-end mb-10">
-          <button id="mobile-close-btn" class="text-white/70 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Fechar menu"><i data-lucide="x" class="w-6 h-6"></i></button>
-        </div>
-        <div class="flex flex-col gap-6">
-          <a href="index.html" class="mobile-nav-link text-white/80 hover:text-gold-300 text-lg font-medium transition-colors">Home</a>
-          <a href="quem-somos.html" class="mobile-nav-link text-white/80 hover:text-gold-300 text-lg font-medium transition-colors">Quem Somos</a>
-          <a href="solucoes.html" class="mobile-nav-link text-gold-300 text-lg font-medium transition-colors">Soluções</a>
-          <a href="clientes.html" class="mobile-nav-link text-white/80 hover:text-gold-300 text-lg font-medium transition-colors">Clientes</a>
-          <div class="mt-4 pt-6 border-t border-white/10">
-            <a href="contato.html" class="mobile-nav-link inline-flex items-center gap-2 bg-gold-300 hover:bg-gold-400 text-navy-800 px-6 py-3 rounded-lg font-semibold transition-all"><i data-lucide="message-circle" class="w-5 h-5"></i> Fale Conosco</a>
-          </div>
+  </nav>
+
+  <!-- Mobile Menu (outside nav) -->
+  <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-screen w-80 z-[60] lg:hidden">
+    <div class="flex flex-col p-8 h-full">
+      <div class="flex justify-end mb-10">
+        <button id="mobile-close-btn" class="text-white/70 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-colors" aria-label="Fechar menu"><i data-lucide="x" class="w-6 h-6"></i></button>
+      </div>
+      <div class="flex flex-col gap-6">
+        <a href="index.html" class="mobile-nav-link text-white/80 hover:text-gold-300 text-lg font-medium transition-colors">Home</a>
+        <a href="quem-somos.html" class="mobile-nav-link text-white/80 hover:text-gold-300 text-lg font-medium transition-colors">Quem Somos</a>
+        <a href="solucoes.html" class="mobile-nav-link text-gold-300 text-lg font-medium transition-colors">Soluções</a>
+        <a href="clientes.html" class="mobile-nav-link text-white/80 hover:text-gold-300 text-lg font-medium transition-colors">Clientes</a>
+        <div class="mt-4 pt-6 border-t border-white/10">
+          <a href="contato.html" class="mobile-nav-link inline-flex items-center gap-2 bg-gold-300 hover:bg-gold-400 text-navy-800 px-6 py-3 rounded-lg font-semibold transition-all"><i data-lucide="message-circle" class="w-5 h-5"></i> Fale Conosco</a>
         </div>
       </div>
     </div>
-    <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden"></div>
-  </nav>
+  </div>
+  <div id="mobile-overlay" class="fixed inset-0 bg-black/50 z-[55] hidden lg:hidden"></div>
 
 
   <!-- PAGE HERO -->
