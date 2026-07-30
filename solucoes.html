@@ -12,8 +12,8 @@
       theme: {
         extend: {
           colors: {
-            navy: { 50:'#e8ecf2',100:'#c5cfe0',200:'#9eafcc',300:'#778fb8',400:'#5977a8',500:'#3b5f99',600:'#2d4a78',700:'#1f365a',800:'#1B2A4A',900:'#111c33',950:'#0a1120' },
-            gold: { 50:'#fef9ec',100:'#fdf0c8',200:'#fbe18d',300:'#F0B731',400:'#e5a31e',500:'#d49212',600:'#b0730d',700:'#8a560e',800:'#724512',900:'#613a14' },
+            navy: { 50:'#e7edf3',100:'#c3d3e2',200:'#9bb6cf',300:'#7298bd',400:'#5383ae',500:'#2c6da8',600:'#1a568b',700:'#103f69',800:'#0f3159',900:'#08203c',950:'#041426' },
+            gold: { 50:'#fff9eb',100:'#fff1c6',200:'#fee38a',300:'#fbbb21',400:'#f1a712',500:'#e09606',600:'#ba7603',700:'#925706',800:'#78450c',900:'#663a0f' },
           },
           fontFamily: { sans:['Space Grotesk','system-ui','sans-serif'], heading:['Space Grotesk','system-ui','sans-serif'] },
         },
@@ -33,65 +33,151 @@
 
     .detail-text {
       font-family: 'Space Grotesk', system-ui, sans-serif;
-      letter-spacing: 0.18em;
-      transform: scaleX(1.08);
-      transform-origin: center;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
       font-weight: 500;
     }
 
     ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #1B2A4A; }
-    ::-webkit-scrollbar-thumb { background: #F0B731; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #e5a31e; }
+    ::-webkit-scrollbar-track { background: #0f3159; }
+    ::-webkit-scrollbar-thumb { background: #fbbb21; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #f1a712; }
 
     .glass-card { background: rgba(255,255,255,0.03); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
-    .glass-card:hover { background: rgba(255,255,255,0.06); border-color: rgba(240,183,49,0.3); transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 0 30px rgba(240,183,49,0.05); }
+    .glass-card:hover { background: rgba(255,255,255,0.06); border-color: rgba(251,187,33,0.3); transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 0 30px rgba(251,187,33,0.05); }
 
-    .white-glass { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(27,42,74,0.08); transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
-    .white-glass:hover { background: rgba(255,255,255,0.95); border-color: rgba(240,183,49,0.4); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(27,42,74,0.1); }
+    .white-glass { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(15,49,89,0.08); transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
+    .white-glass:hover { background: rgba(255,255,255,0.95); border-color: rgba(251,187,33,0.4); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(15,49,89,0.1); }
 
-    .gold-line { width: 60px; height: 4px; background: linear-gradient(90deg, #F0B731, #e5a31e); border-radius: 2px; }
-    .grid-bg { background-image: linear-gradient(rgba(27,42,74,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(27,42,74,0.03) 1px, transparent 1px); background-size: 60px 60px; }
+    .gold-line { width: 60px; height: 4px; background: linear-gradient(90deg, #fbbb21, #f1a712); border-radius: 2px; }
+    .grid-bg { background-image: linear-gradient(rgba(15,49,89,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(15,49,89,0.03) 1px, transparent 1px); background-size: 60px 60px; }
 
-    .icon-container { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: linear-gradient(135deg, rgba(240,183,49,0.1), rgba(240,183,49,0.05)); border: 1px solid rgba(240,183,49,0.2); flex-shrink: 0; }
+    .icon-container { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: linear-gradient(135deg, rgba(251,187,33,0.1), rgba(251,187,33,0.05)); border: 1px solid rgba(251,187,33,0.2); flex-shrink: 0; }
 
     .nav-link { position: relative; }
-    .nav-link::after { content:''; position:absolute; bottom:-4px; left:50%; width:0; height:2px; background:#F0B731; transition: all 0.3s ease; transform: translateX(-50%); }
+    .nav-link::after { content:''; position:absolute; bottom:-4px; left:50%; width:0; height:2px; background:#fbbb21; transition: all 0.3s ease; transform: translateX(-50%); }
     .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
-    .mobile-menu { transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); background: #1B2A4A !important; }
+    .mobile-menu { transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1); background: #0f3159 !important; }
     .mobile-menu.open { transform: translateX(0); }
 
     .whatsapp-float { position: fixed; bottom: 24px; right: 24px; z-index: 999; animation: float-btn 3s ease-in-out infinite; }
     @keyframes float-btn { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
 
-    .navbar-scrolled { background: rgba(27,42,74,0.6) !important; backdrop-filter: blur(24px) saturate(180%) !important; -webkit-backdrop-filter: blur(24px) saturate(180%) !important; border-bottom: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.18); }
+    .navbar-scrolled { background: rgba(15,49,89,0.6) !important; backdrop-filter: blur(24px) saturate(180%) !important; -webkit-backdrop-filter: blur(24px) saturate(180%) !important; border-bottom: 1px solid rgba(255,255,255,0.08); box-shadow: 0 8px 32px rgba(0,0,0,0.18); }
 
-    .page-hero { background: linear-gradient(135deg, #1B2A4A 0%, #0a1120 100%); position: relative; overflow: hidden; }
-    .page-hero::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse at 70% 30%, rgba(240,183,49,0.06) 0%, transparent 60%); pointer-events:none; }
+    .page-hero { background: linear-gradient(135deg, #0f3159 0%, #041426 100%); position: relative; overflow: hidden; }
+    .page-hero::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse at 70% 30%, rgba(251,187,33,0.06) 0%, transparent 60%); pointer-events:none; }
 
     /* Service color themes */
     .service-nav-item { transition: all 0.3s ease; cursor: pointer; border: 2px solid transparent; }
     .service-nav-item:hover { transform: translateY(-4px); }
 
-    .service-blue { --service-color: #2563EB; --service-light: rgba(37,99,235,0.1); --service-border: rgba(37,99,235,0.25); --service-glow: rgba(37,99,235,0.06); }
-    .service-green { --service-color: #059669; --service-light: rgba(5,150,105,0.1); --service-border: rgba(5,150,105,0.25); --service-glow: rgba(5,150,105,0.06); }
-    .service-orange { --service-color: #D97706; --service-light: rgba(217,119,6,0.1); --service-border: rgba(217,119,6,0.25); --service-glow: rgba(217,119,6,0.06); }
+    /* ===== cor de cada área (slides 4 e 7) =====
+       Representação Comercial = amarelo | Consultoria Estratégica = preto | Trade Marketing = azul
+       --service-color: a cor da marca da área (blocos, barras, preenchimentos)
+       --service-ink:   versão legível sobre o fundo da própria seção (texto e ícones)
+       --service-on-dark: versão para uso sobre cartões escuros                       */
+    .service-representacao {
+      --service-color: #fbbb21;
+      --service-on-light: #925706;            /* amarelo escurecido: legível no branco */
+      --service-on-dark: #fbbb21;
+      --service-ink: var(--service-on-light); /* a seção tem fundo claro */
+      --service-light: rgba(251,187,33,0.16); --service-border: rgba(251,187,33,0.45);
+      --service-glow: rgba(251,187,33,0.10);
+      --service-nav-bg: rgba(251,187,33,0.16); --service-nav-border: rgba(251,187,33,0.40);
+    }
+    .service-consultoria {
+      --service-color: #16181d;
+      --service-on-light: #16181d;
+      --service-on-dark: #ffffff;
+      --service-ink: var(--service-on-dark);  /* a seção tem fundo preto */
+      --service-light: rgba(255,255,255,0.09); --service-border: rgba(255,255,255,0.22);
+      --service-glow: rgba(255,255,255,0.05);
+      --service-nav-bg: rgba(22,24,29,0.08); --service-nav-border: rgba(22,24,29,0.20);
+    }
+    .service-trade {
+      --service-color: #0f3159;
+      --service-on-light: #0f3159;
+      --service-on-dark: #7298bd;
+      --service-ink: var(--service-on-light); /* a seção tem fundo claro */
+      --service-light: rgba(15,49,89,0.08); --service-border: rgba(15,49,89,0.26);
+      --service-glow: rgba(15,49,89,0.07);
+      --service-nav-bg: rgba(15,49,89,0.08); --service-nav-border: rgba(15,49,89,0.22);
+    }
+
+    /* fundo da seção de Consultoria na cor da área (preto) */
+    .section-consultoria { background: linear-gradient(160deg, #16181d 0%, #0b0c0f 100%); }
+
+    /* atalhos do topo — cada um na cor da sua área */
+    .service-nav-item { border-color: var(--service-nav-border) !important; }
+    .service-nav-item:hover { border-color: var(--service-color) !important; }
+    .service-nav-icon { background: var(--service-nav-bg); transition: background 0.3s ease; }
+    .service-nav-icon i, .service-nav-icon svg { color: var(--service-on-light); }
 
     .service-section { border-left: 5px solid var(--service-color); }
-    .service-badge { background: var(--service-light); border: 1px solid var(--service-border); color: var(--service-color); }
+    .service-badge { background: var(--service-light); border: 1px solid var(--service-border); color: var(--service-ink); }
     .service-icon-box { background: var(--service-light); border: 1px solid var(--service-border); }
-    .service-icon-box i, .service-icon-box svg { color: var(--service-color); }
-    .service-item { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); border: 1px solid rgba(27,42,74,0.06); transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
+    .service-icon-box i, .service-icon-box svg { color: var(--service-ink); }
+
+    /* ===== header ilustrado de cada solução ===== */
+    .service-header {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0f3159 0%, #08203c 100%);
+      box-shadow: 0 20px 45px rgba(4,20,38,0.18);
+    }
+    /* faixa com a cor da área */
+    .service-header::before {
+      content: ''; position: absolute; top: 0; left: 0; bottom: 0;
+      width: 6px; background: var(--service-on-dark); z-index: 3;
+    }
+    .service-header-text { padding: 2rem 1.75rem; position: relative; z-index: 2; }
+    .service-header-media { position: relative; min-height: 220px; }
+    .service-header-media img {
+      display: block; width: 100%; height: 100%; object-fit: cover;
+    }
+    /* funde a foto com o fundo escuro do header */
+    .service-header-media::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(8,32,60,0.92) 0%, rgba(8,32,60,0.15) 55%, rgba(8,32,60,0) 100%);
+    }
+    /* dentro do header (fundo escuro) o badge usa fundo neutro e texto na cor da área */
+    .service-header .service-badge {
+      color: var(--service-on-dark);
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.18);
+    }
+    .service-header .service-badge i, .service-header .service-badge svg { color: var(--service-on-dark); }
+
+    @media (min-width: 768px) {
+      .service-header { grid-template-columns: 1fr 30%; align-items: stretch; }
+      .service-header-text { padding: 2.5rem 2.5rem 2.5rem 3rem; }
+      .service-header-media { min-height: 100%; }
+      .service-header-media::after {
+        background: linear-gradient(to right, rgba(8,32,60,0.96) 0%, rgba(8,32,60,0.45) 45%, rgba(8,32,60,0.12) 100%);
+      }
+    }
+    @media (min-width: 1024px) {
+      .service-header { grid-template-columns: 1fr 34%; }
+      .service-header-text { padding: 3rem 3rem 3rem 3.5rem; }
+    }
+    .service-item { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); border: 1px solid rgba(15,49,89,0.06); transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
     .service-item:hover { background: rgba(255,255,255,0.95); border-color: var(--service-border); transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
 
-    .service-dark-card { background: linear-gradient(135deg, #1B2A4A, #111c33); border: 1px solid rgba(255,255,255,0.06); }
+    .service-dark-card { background: linear-gradient(135deg, #0f3159, #08203c); border: 1px solid rgba(255,255,255,0.06); }
 
     .glass-card-service { background: rgba(255,255,255,0.03); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
     .glass-card-service:hover { background: rgba(255,255,255,0.06); border-color: var(--service-border); transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
 
     .service-divider { height: 4px; background: linear-gradient(90deg, transparent, var(--service-color), transparent); opacity: 0.3; }
+
+    /* cards da metodologia: hover na cor da área */
+    .methodology-card { transition: border-color 0.3s ease; }
+    .methodology-card:hover { border-color: var(--service-border) !important; }
   </style>
 </head>
 
@@ -165,27 +251,27 @@
   <section class="bg-white py-10 relative border-b border-navy-100/50" data-aos="fade-up">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-3 gap-4 lg:gap-6">
-        <a href="#representacao" class="service-nav-item service-blue rounded-2xl p-5 flex items-center gap-4 bg-white shadow-md hover:shadow-xl border-2 border-blue-100 hover:border-blue-400 group">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-blue-50 group-hover:bg-blue-100 transition-colors flex-shrink-0">
-            <i data-lucide="handshake" class="w-6 h-6 text-blue-600"></i>
+        <a href="#representacao" class="service-nav-item service-representacao rounded-2xl p-5 flex items-center gap-4 bg-white shadow-md hover:shadow-xl border-2 group">
+          <div class="w-12 h-12 service-nav-icon rounded-xl flex items-center justify-center flex-shrink-0">
+            <i data-lucide="handshake" class="w-6 h-6"></i>
           </div>
           <div>
             <h3 class="font-heading font-bold text-navy-800 text-sm">Representação Comercial</h3>
             <p class="text-navy-500 text-xs mt-0.5">Expansão e relacionamento</p>
           </div>
         </a>
-        <a href="#consultoria" class="service-nav-item service-green rounded-2xl p-5 flex items-center gap-4 bg-white shadow-md hover:shadow-xl border-2 border-emerald-100 hover:border-emerald-400 group">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-emerald-50 group-hover:bg-emerald-100 transition-colors flex-shrink-0">
-            <i data-lucide="lightbulb" class="w-6 h-6 text-emerald-600"></i>
+        <a href="#consultoria" class="service-nav-item service-consultoria rounded-2xl p-5 flex items-center gap-4 bg-white shadow-md hover:shadow-xl border-2 group">
+          <div class="w-12 h-12 service-nav-icon rounded-xl flex items-center justify-center flex-shrink-0">
+            <i data-lucide="lightbulb" class="w-6 h-6"></i>
           </div>
           <div>
             <h3 class="font-heading font-bold text-navy-800 text-sm">Consultoria Estratégica</h3>
             <p class="text-navy-500 text-xs mt-0.5">Diagnóstico e planejamento</p>
           </div>
         </a>
-        <a href="#trade" class="service-nav-item service-orange rounded-2xl p-5 flex items-center gap-4 bg-white shadow-md hover:shadow-xl border-2 border-amber-100 hover:border-amber-400 group">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center bg-amber-50 group-hover:bg-amber-100 transition-colors flex-shrink-0">
-            <i data-lucide="store" class="w-6 h-6 text-amber-600"></i>
+        <a href="#trade" class="service-nav-item service-trade rounded-2xl p-5 flex items-center gap-4 bg-white shadow-md hover:shadow-xl border-2 group">
+          <div class="w-12 h-12 service-nav-icon rounded-xl flex items-center justify-center flex-shrink-0">
+            <i data-lucide="store" class="w-6 h-6"></i>
           </div>
           <div>
             <h3 class="font-heading font-bold text-navy-800 text-sm">Trade Marketing</h3>
@@ -198,20 +284,25 @@
 
 
   <!-- ========== REPRESENTAÇÃO COMERCIAL (AZUL) ========== -->
-  <section id="representacao" class="bg-white py-24 lg:py-32 grid-bg relative service-blue">
+  <section id="representacao" class="bg-white py-24 lg:py-32 grid-bg relative service-representacao">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Service Header -->
-      <div class="mb-16 service-section pl-8 rounded-r-xl" data-aos="fade-right">
-        <div class="inline-flex items-center gap-2 service-badge rounded-full px-4 py-1.5 mb-4">
-          <i data-lucide="handshake" class="w-4 h-4"></i>
-          <span class="detail-text text-xs" style="color: #2563EB;">Representação Comercial</span>
+      <div class="service-header mb-16" data-aos="fade-up">
+        <div class="service-header-text">
+          <div class="inline-flex items-center gap-2 service-badge rounded-full px-4 py-1.5 mb-4">
+            <i data-lucide="handshake" class="w-4 h-4"></i>
+            <span class="detail-text text-xs">Representação Comercial</span>
+          </div>
+          <h2 class="font-heading text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white/80 leading-tight mb-4">
+            Expandir mercados exige <span style="color: var(--service-on-dark);">estratégia e relacionamento.</span>
+          </h2>
+          <p class="text-white/60 text-base lg:text-lg leading-relaxed max-w-2xl">
+            A Master Impulso apoia empresas na abertura de novas oportunidades comerciais e no fortalecimento da presença de marca no mercado.
+          </p>
         </div>
-        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-800 leading-tight mb-4">
-          Expandir mercados exige <span style="color: #2563EB;">estratégia e relacionamento.</span>
-        </h2>
-        <p class="text-navy-600 text-lg leading-relaxed max-w-3xl">
-          A Master Impulso apoia empresas na abertura de novas oportunidades comerciais e no fortalecimento da presença de marca no mercado.
-        </p>
+        <div class="service-header-media">
+          <img src="img/hdr-representacao.jpg" alt="Profissionais em negociação comercial" loading="lazy" decoding="async">
+        </div>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12 items-start">
@@ -252,10 +343,10 @@
         <!-- Para quem é -->
         <div data-aos="fade-up" data-aos-delay="200">
           <div class="service-dark-card rounded-2xl p-8 relative overflow-hidden">
-            <div class="absolute inset-0" style="background: radial-gradient(ellipse at bottom right, rgba(37,99,235,0.08), transparent 60%);"></div>
+            <div class="absolute inset-0" style="background: radial-gradient(ellipse at bottom right, rgba(251,187,33,0.08), transparent 60%);"></div>
             <div class="relative z-10">
               <h4 class="font-heading text-lg font-bold text-white mb-4 flex items-center gap-3">
-                <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.3);"><i data-lucide="user-check" class="w-4 h-4" style="color: #60a5fa;"></i></div>
+                <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background: rgba(251,187,33,0.15); border: 1px solid rgba(251,187,33,0.3);"><i data-lucide="user-check" class="w-4 h-4" style="color: var(--service-on-dark);"></i></div>
                 Para quem é
               </h4>
               <p class="text-white/60 text-sm leading-relaxed">
@@ -274,23 +365,28 @@
 
 
   <!-- ========== CONSULTORIA ESTRATÉGICA (VERDE) ========== -->
-  <section id="consultoria" class="bg-navy-800 py-24 lg:py-32 relative overflow-hidden service-green">
-    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent"></div>
-    <div class="absolute top-40 left-0 w-72 h-72 rounded-full blur-3xl" style="background: rgba(5,150,105,0.06);"></div>
+  <section id="consultoria" class="section-consultoria py-24 lg:py-32 relative overflow-hidden service-consultoria">
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/25 to-transparent"></div>
+    <div class="absolute top-40 left-0 w-72 h-72 rounded-full blur-3xl" style="background: rgba(255,255,255,0.06);"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Service Header -->
-      <div class="text-center mb-20" data-aos="fade-up">
-        <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-6" style="background: rgba(5,150,105,0.1); border: 1px solid rgba(5,150,105,0.25);">
-          <i data-lucide="lightbulb" class="w-4 h-4" style="color: #34d399;"></i>
-          <span class="detail-text text-xs" style="color: #34d399;">Consultoria Estratégica</span>
+      <div class="service-header mb-20" data-aos="fade-up">
+        <div class="service-header-text">
+          <div class="inline-flex items-center gap-2 service-badge rounded-full px-4 py-1.5 mb-4">
+            <i data-lucide="lightbulb" class="w-4 h-4"></i>
+            <span class="detail-text text-xs">Consultoria Estratégica</span>
+          </div>
+          <h2 class="font-heading text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white/80 leading-tight mb-4">
+            Crescer exige clareza sobre o que precisa ser <span style="color: var(--service-on-dark);">ajustado.</span>
+          </h2>
+          <p class="text-white/60 text-base lg:text-lg leading-relaxed max-w-2xl">
+            A Master Impulso identifica gargalos, organiza processos e cria estratégias para melhorar a performance comercial da empresa.
+          </p>
         </div>
-        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-          Crescer exige clareza sobre o que precisa ser <span style="color: #34d399;">ajustado.</span>
-        </h2>
-        <p class="text-white/60 text-lg max-w-3xl mx-auto leading-relaxed">
-          A Master Impulso identifica gargalos, organiza processos e cria estratégias para melhorar a performance comercial da empresa.
-        </p>
+        <div class="service-header-media">
+          <img src="img/hdr-consultoria.jpg" alt="Consultora estratégica analisando indicadores" loading="lazy" decoding="async">
+        </div>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12 mb-20">
@@ -327,32 +423,32 @@
         <!-- O que fazemos -->
         <div data-aos="fade-left" data-aos-delay="200">
           <h3 class="font-heading text-2xl font-bold text-white mb-8 flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background: rgba(5,150,105,0.15); border: 1px solid rgba(5,150,105,0.3);"><i data-lucide="check-circle-2" class="w-4 h-4" style="color: #34d399;"></i></div>
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);"><i data-lucide="check-circle-2" class="w-4 h-4" style="color: var(--service-ink);"></i></div>
             O que fazemos
           </h3>
           <div class="space-y-3">
             <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(5,150,105,0.1); color: #34d399;"><i data-lucide="check" class="w-4 h-4"></i></span>
+              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(255,255,255,0.1); color: var(--service-ink);"><i data-lucide="check" class="w-4 h-4"></i></span>
               <p class="text-white/70 text-sm">Diagnóstico comercial</p>
             </div>
             <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(5,150,105,0.1); color: #34d399;"><i data-lucide="check" class="w-4 h-4"></i></span>
+              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(255,255,255,0.1); color: var(--service-ink);"><i data-lucide="check" class="w-4 h-4"></i></span>
               <p class="text-white/70 text-sm">Estruturação comercial</p>
             </div>
             <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(5,150,105,0.1); color: #34d399;"><i data-lucide="check" class="w-4 h-4"></i></span>
+              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(255,255,255,0.1); color: var(--service-ink);"><i data-lucide="check" class="w-4 h-4"></i></span>
               <p class="text-white/70 text-sm">Planejamento estratégico</p>
             </div>
             <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(5,150,105,0.1); color: #34d399;"><i data-lucide="check" class="w-4 h-4"></i></span>
+              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(255,255,255,0.1); color: var(--service-ink);"><i data-lucide="check" class="w-4 h-4"></i></span>
               <p class="text-white/70 text-sm">Desenvolvimento de mercado</p>
             </div>
             <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(5,150,105,0.1); color: #34d399;"><i data-lucide="check" class="w-4 h-4"></i></span>
+              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(255,255,255,0.1); color: var(--service-ink);"><i data-lucide="check" class="w-4 h-4"></i></span>
               <p class="text-white/70 text-sm">Posicionamento de marca</p>
             </div>
             <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(5,150,105,0.1); color: #34d399;"><i data-lucide="check" class="w-4 h-4"></i></span>
+              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(255,255,255,0.1); color: var(--service-ink);"><i data-lucide="check" class="w-4 h-4"></i></span>
               <p class="text-white/70 text-sm">Otimização de processos comerciais</p>
             </div>
           </div>
@@ -363,28 +459,28 @@
       <div data-aos="fade-up">
         <h3 class="font-heading text-2xl font-bold text-white mb-10 text-center">Metodologia</h3>
         <div class="flex flex-wrap justify-center gap-4 lg:gap-6">
-          <div class="glass-card-service rounded-xl px-6 py-5 text-center min-w-[140px] group" style="--service-border: rgba(5,150,105,0.4);">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #34d399;">01</span>
+          <div class="glass-card-service rounded-xl px-6 py-5 text-center min-w-[140px] group" style="--service-border: rgba(255,255,255,0.4);">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-ink);">01</span>
             <p class="text-white/70 text-sm font-medium">Diagnóstico</p>
           </div>
           <div class="hidden lg:flex items-center text-white/20"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
-          <div class="glass-card-service rounded-xl px-6 py-5 text-center min-w-[140px] group" style="--service-border: rgba(5,150,105,0.4);">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #34d399;">02</span>
+          <div class="glass-card-service rounded-xl px-6 py-5 text-center min-w-[140px] group" style="--service-border: rgba(255,255,255,0.4);">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-ink);">02</span>
             <p class="text-white/70 text-sm font-medium">Planejamento</p>
           </div>
           <div class="hidden lg:flex items-center text-white/20"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
-          <div class="glass-card-service rounded-xl px-6 py-5 text-center min-w-[140px] group" style="--service-border: rgba(5,150,105,0.4);">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #34d399;">03</span>
+          <div class="glass-card-service rounded-xl px-6 py-5 text-center min-w-[140px] group" style="--service-border: rgba(255,255,255,0.4);">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-ink);">03</span>
             <p class="text-white/70 text-sm font-medium">Implementação</p>
           </div>
           <div class="hidden lg:flex items-center text-white/20"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
-          <div class="glass-card-service rounded-xl px-6 py-5 text-center min-w-[140px] group" style="--service-border: rgba(5,150,105,0.4);">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #34d399;">04</span>
+          <div class="glass-card-service rounded-xl px-6 py-5 text-center min-w-[140px] group" style="--service-border: rgba(255,255,255,0.4);">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-ink);">04</span>
             <p class="text-white/70 text-sm font-medium">Monitoramento</p>
           </div>
           <div class="hidden lg:flex items-center text-white/20"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
-          <div class="glass-card-service rounded-xl px-6 py-5 text-center min-w-[140px] group" style="--service-border: rgba(5,150,105,0.4);">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #34d399;">05</span>
+          <div class="glass-card-service rounded-xl px-6 py-5 text-center min-w-[140px] group" style="--service-border: rgba(255,255,255,0.4);">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-ink);">05</span>
             <p class="text-white/70 text-sm font-medium">Evolução contínua</p>
           </div>
         </div>
@@ -394,20 +490,25 @@
 
 
   <!-- ========== TRADE MARKETING (LARANJA) ========== -->
-  <section id="trade" class="bg-white py-24 lg:py-32 grid-bg relative service-orange">
+  <section id="trade" class="bg-white py-24 lg:py-32 grid-bg relative service-trade">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Service Header -->
-      <div class="text-center mb-20 service-section pl-8 rounded-r-xl border-l-0" data-aos="fade-up">
-        <div class="inline-flex items-center gap-2 service-badge rounded-full px-4 py-1.5 mb-6">
-          <i data-lucide="store" class="w-4 h-4"></i>
-          <span class="detail-text text-xs" style="color: #D97706;">Trade Marketing</span>
+      <div class="service-header mb-20" data-aos="fade-up">
+        <div class="service-header-text">
+          <div class="inline-flex items-center gap-2 service-badge rounded-full px-4 py-1.5 mb-4">
+            <i data-lucide="store" class="w-4 h-4"></i>
+            <span class="detail-text text-xs">Trade Marketing</span>
+          </div>
+          <h2 class="font-heading text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white/80 leading-tight mb-4">
+            Execução eficiente no ponto de venda gera <span style="color: var(--service-on-dark);">resultado.</span>
+          </h2>
+          <p class="text-white/60 text-base lg:text-lg leading-relaxed max-w-2xl">
+            A Master Impulso estrutura operações de trade marketing para melhorar presença, exposição e performance no varejo.
+          </p>
         </div>
-        <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-800 mb-6">
-          Execução eficiente no ponto de venda gera <span style="color: #D97706;">resultado.</span>
-        </h2>
-        <p class="text-navy-600 text-lg max-w-3xl mx-auto leading-relaxed">
-          A Master Impulso estrutura operações de trade marketing para melhorar presença, exposição e performance no varejo.
-        </p>
+        <div class="service-header-media">
+          <img src="img/hdr-trade.jpg" alt="Equipe de trade marketing no ponto de venda" loading="lazy" decoding="async">
+        </div>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-12 mb-20">
@@ -418,6 +519,10 @@
             Nossa atuação
           </h3>
           <div class="grid sm:grid-cols-2 gap-3">
+            <div class="service-item rounded-xl p-5 text-center group">
+              <div class="w-12 h-12 service-icon-box rounded-xl flex items-center justify-center mx-auto mb-3"><i data-lucide="megaphone" class="w-5 h-5"></i></div>
+              <p class="text-navy-800 font-semibold text-sm">Promotoria e merchandising</p>
+            </div>
             <div class="service-item rounded-xl p-5 text-center group">
               <div class="w-12 h-12 service-icon-box rounded-xl flex items-center justify-center mx-auto mb-3"><i data-lucide="layout-grid" class="w-5 h-5"></i></div>
               <p class="text-navy-800 font-semibold text-sm">Gestão de categoria</p>
@@ -452,26 +557,26 @@
             Cultura Master no PDV
           </h3>
           <div class="service-dark-card rounded-2xl p-8 relative overflow-hidden h-full">
-            <div class="absolute inset-0" style="background: radial-gradient(ellipse at top left, rgba(217,119,6,0.08), transparent 60%);"></div>
+            <div class="absolute inset-0" style="background: radial-gradient(ellipse at top left, rgba(15,49,89,0.08), transparent 60%);"></div>
             <div class="relative z-10 space-y-5">
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(217,119,6,0.12); border: 1px solid rgba(217,119,6,0.25);"><i data-lucide="user-check" class="w-5 h-5" style="color: #fbbf24;"></i></div>
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(15,49,89,0.12); border: 1px solid rgba(15,49,89,0.25);"><i data-lucide="user-check" class="w-5 h-5" style="color: var(--service-on-dark);"></i></div>
                 <div><p class="text-white font-semibold mb-1">Promotores preparados</p><p class="text-white/50 text-sm">Equipe treinada e capacitada</p></div>
               </div>
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(217,119,6,0.12); border: 1px solid rgba(217,119,6,0.25);"><i data-lucide="bar-chart-3" class="w-5 h-5" style="color: #fbbf24;"></i></div>
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(15,49,89,0.12); border: 1px solid rgba(15,49,89,0.25);"><i data-lucide="bar-chart-3" class="w-5 h-5" style="color: var(--service-on-dark);"></i></div>
                 <div><p class="text-white font-semibold mb-1">Execução baseada em indicadores</p><p class="text-white/50 text-sm">Dados orientando cada ação</p></div>
               </div>
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(217,119,6,0.12); border: 1px solid rgba(217,119,6,0.25);"><i data-lucide="heart-handshake" class="w-5 h-5" style="color: #fbbf24;"></i></div>
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(15,49,89,0.12); border: 1px solid rgba(15,49,89,0.25);"><i data-lucide="heart-handshake" class="w-5 h-5" style="color: var(--service-on-dark);"></i></div>
                 <div><p class="text-white font-semibold mb-1">Relacionamento próximo com o varejo</p><p class="text-white/50 text-sm">Parceria sólida com PDVs</p></div>
               </div>
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(217,119,6,0.12); border: 1px solid rgba(217,119,6,0.25);"><i data-lucide="target" class="w-5 h-5" style="color: #fbbf24;"></i></div>
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(15,49,89,0.12); border: 1px solid rgba(15,49,89,0.25);"><i data-lucide="target" class="w-5 h-5" style="color: var(--service-on-dark);"></i></div>
                 <div><p class="text-white font-semibold mb-1">Foco em performance</p><p class="text-white/50 text-sm">Resultados mensuráveis</p></div>
               </div>
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(217,119,6,0.12); border: 1px solid rgba(217,119,6,0.25);"><i data-lucide="refresh-cw" class="w-5 h-5" style="color: #fbbf24;"></i></div>
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(15,49,89,0.12); border: 1px solid rgba(15,49,89,0.25);"><i data-lucide="refresh-cw" class="w-5 h-5" style="color: var(--service-on-dark);"></i></div>
                 <div><p class="text-white font-semibold mb-1">Melhoria contínua da operação</p><p class="text-white/50 text-sm">Evolução constante</p></div>
               </div>
             </div>
@@ -483,33 +588,33 @@
       <div data-aos="fade-up">
         <h3 class="font-heading text-2xl font-bold text-navy-800 mb-10 text-center">Metodologia</h3>
         <div class="flex flex-wrap justify-center gap-4 lg:gap-6">
-          <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card hover:border-amber-500/40">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbf24;">01</span>
+          <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card methodology-card">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-on-dark);">01</span>
             <p class="text-white/70 text-sm font-medium">Diagnóstico</p>
           </div>
           <div class="hidden lg:flex items-center text-navy-300"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
-          <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card hover:border-amber-500/40">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbf24;">02</span>
+          <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card methodology-card">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-on-dark);">02</span>
             <p class="text-white/70 text-sm font-medium">Planejamento</p>
           </div>
           <div class="hidden lg:flex items-center text-navy-300"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
-          <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card hover:border-amber-500/40">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbf24;">03</span>
+          <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card methodology-card">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-on-dark);">03</span>
             <p class="text-white/70 text-sm font-medium">Treinamento</p>
           </div>
           <div class="hidden lg:flex items-center text-navy-300"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
-          <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card hover:border-amber-500/40">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbf24;">04</span>
+          <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card methodology-card">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-on-dark);">04</span>
             <p class="text-white/70 text-sm font-medium">Execução</p>
           </div>
           <div class="hidden lg:flex items-center text-navy-300"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
-          <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card hover:border-amber-500/40">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbf24;">05</span>
+          <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card methodology-card">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-on-dark);">05</span>
             <p class="text-white/70 text-sm font-medium">Relatórios</p>
           </div>
           <div class="hidden lg:flex items-center text-navy-300"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
-          <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card hover:border-amber-500/40">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbf24;">06</span>
+          <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card methodology-card">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-on-dark);">06</span>
             <p class="text-white/70 text-sm font-medium">Otimização contínua</p>
           </div>
         </div>
@@ -521,7 +626,7 @@
   <!-- CTA -->
   <section class="bg-navy-800 py-20 relative overflow-hidden">
     <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-300/30 to-transparent"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(240,183,49,0.04),transparent_70%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(251,187,33,0.04),transparent_70%)]"></div>
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-aos="zoom-in">
       <h3 class="font-heading text-2xl sm:text-3xl font-bold text-white mb-4">Pronto para impulsionar seus resultados?</h3>
       <p class="text-white/60 max-w-xl mx-auto mb-8">Fale com a Master Impulso e descubra qual solução é a ideal para a sua empresa.</p>
@@ -568,9 +673,8 @@
       <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="text-white/30 text-xs">© 2026 Master Impulso. Todos os direitos reservados.</p>
         <div class="flex items-center gap-4">
-          <a href="#" class="text-white/30 hover:text-gold-300 transition-colors" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-          <a href="#" class="text-white/30 hover:text-gold-300 transition-colors" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-          <a href="#" class="text-white/30 hover:text-gold-300 transition-colors" aria-label="Facebook"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+          <a href="https://www.instagram.com/masterimpulsotrade" target="_blank" rel="noopener" class="text-white/30 hover:text-gold-300 transition-colors" aria-label="Instagram da Master Impulso"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="https://www.linkedin.com/company/masterimpulsotrade/" target="_blank" rel="noopener" class="text-white/30 hover:text-gold-300 transition-colors" aria-label="LinkedIn da Master Impulso"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
         </div>
       </div>
     </div>

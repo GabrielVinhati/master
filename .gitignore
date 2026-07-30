@@ -1,0 +1,6 @@
+# Arquivos de origem (PSD/artes brutas) — ~715 MB, acima do limite do GitHub.
+# As versões exportadas e otimizadas para o site ficam em img/.
+IMAGENS SITE/
+
+# macOS
+.DS_Store
