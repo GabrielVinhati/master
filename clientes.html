@@ -103,7 +103,7 @@
     .logo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
     @media (min-width: 640px)  { .logo-grid { grid-template-columns: repeat(3, 1fr); } }
     @media (min-width: 1024px) { .logo-grid { grid-template-columns: repeat(5, 1fr); gap: 1rem; } }
-    .logo-grid-2 { grid-template-columns: repeat(2, 1fr) !important; }
+    .logo-grid-2 { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important; }
     .logo-cell {
       background: #fff; border: 1px solid rgba(15,49,89,0.08); border-radius: 0.75rem;
       height: 92px; display: flex; align-items: center; justify-content: center; padding: 0.9rem;
@@ -112,12 +112,9 @@
     .logo-cell:hover { box-shadow: 0 10px 24px rgba(15,49,89,0.10); border-color: var(--group-color); transform: translateY(-3px); }
     .logo-cell img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; opacity: .92; transition: opacity .3s ease; }
     .logo-cell:hover img { opacity: 1; }
-    /* sem logotipo enviado: mostra o nome */
-    .logo-cell-text { background: #f7f9fc; border-style: dashed; }
-    .logo-cell-text span { font-size: 0.75rem; font-weight: 600; color: #2c6da8; text-align: center; line-height: 1.3; }
 
     /* ---- parceiros industriais: hover revela a foto do equipamento ---- */
-    .partner-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+    .partner-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(158px, 1fr)); gap: 0.75rem; }
     .partner-card {
       position: relative; overflow: hidden; isolation: isolate;
       background: #fff; border: 1px solid rgba(15,49,89,0.08); border-radius: 0.75rem;
@@ -151,7 +148,6 @@
     .partner-name em { display: block; font-style: normal; font-weight: 400; opacity: .75; font-size: 0.6875rem; }
     .partner-card:hover .partner-name { color: #fff; font-size: 0.9375rem; }
     .partner-card:hover .partner-name em { color: var(--group-color); opacity: 1; }
-    .partner-card-text { background: #f7f9fc; border-style: dashed; }
 
     @media (prefers-reduced-motion: reduce) {
       .logo-cell, .logo-cell img, .partner-card, .partner-card::before, .partner-card::after,
@@ -254,9 +250,6 @@
               <img class="partner-logo" src="img/clientes/dhont.svg" alt="D'Hondt Thermal Solutions" loading="lazy" decoding="async">
               <span class="partner-name">D'Hondt Thermal Solutions<em>França</em></span>
             </div>
-            <div class="partner-card partner-card-text">
-              <span class="partner-name">DMH Metalúrgica<em>Brasil</em></span>
-            </div>
           </div>
         </section>
 
@@ -267,7 +260,6 @@
             <div class="logo-cell">
               <img src="img/clientes/tatica.png" alt="Tática" loading="lazy" decoding="async">
             </div>
-            <div class="logo-cell logo-cell-text"><span>Alegrete</span></div>
             <div class="logo-cell">
               <img src="img/clientes/acasadosalgado.png" alt="A Casa do Salgado" loading="lazy" decoding="async">
             </div>
@@ -283,7 +275,6 @@
 
         <h4 class="client-subgroup">Clientes e marcas</h4>
         <div class="logo-grid">
-          <div class="logo-cell logo-cell-text"><span>Aloeste</span></div>
           <div class="logo-cell">
             <img src="img/clientes/american-bev.png" alt="American Bev" loading="lazy" decoding="async">
           </div>
@@ -305,10 +296,6 @@
           <div class="logo-cell">
             <img src="img/clientes/lynv.png" alt="Lynv" loading="lazy" decoding="async">
           </div>
-          <div class="logo-cell logo-cell-text"><span>Norlimp</span></div>
-          <div class="logo-cell logo-cell-text"><span>Pacto Trade</span></div>
-          <div class="logo-cell logo-cell-text"><span>Plastex</span></div>
-          <div class="logo-cell logo-cell-text"><span>Pratsy</span></div>
           <div class="logo-cell">
             <img src="img/clientes/amore.png" alt="RB Amore" loading="lazy" decoding="async">
           </div>
@@ -337,9 +324,6 @@
           <div class="logo-cell">
             <img src="img/clientes/supermercados-monte-serrat.png" alt="Supermercados Monte Serrat" loading="lazy" decoding="async">
           </div>
-          <div class="logo-cell logo-cell-text"><span>Supermercados Montekali</span></div>
-          <div class="logo-cell logo-cell-text"><span>BOA Supermercados</span></div>
-          <div class="logo-cell logo-cell-text"><span>Federzoni Supermercados</span></div>
         </div>
       </section>
 
