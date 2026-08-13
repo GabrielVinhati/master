@@ -93,6 +93,7 @@
       --service-light: rgba(251,187,33,0.16); --service-border: rgba(251,187,33,0.45);
       --service-glow: rgba(251,187,33,0.10);
       --service-nav-bg: rgba(251,187,33,0.16); --service-nav-border: rgba(251,187,33,0.40);
+      --service-badge-bg: rgba(251,187,33,0.18); --service-badge-bd: rgba(251,187,33,0.60);
     }
     .service-consultoria {
       --service-color: #16181d;
@@ -102,19 +103,18 @@
       --service-light: rgba(255,255,255,0.09); --service-border: rgba(255,255,255,0.22);
       --service-glow: rgba(255,255,255,0.05);
       --service-nav-bg: rgba(22,24,29,0.08); --service-nav-border: rgba(22,24,29,0.20);
+      --service-badge-bg: rgba(255,255,255,0.16); --service-badge-bd: rgba(255,255,255,0.55);
     }
     .service-trade {
       --service-color: #0f3159;
       --service-on-light: #0f3159;
-      --service-on-dark: #7298bd;
+      --service-on-dark: #9bb6cf;
       --service-ink: var(--service-on-light); /* a seção tem fundo claro */
       --service-light: rgba(15,49,89,0.08); --service-border: rgba(15,49,89,0.26);
       --service-glow: rgba(15,49,89,0.07);
       --service-nav-bg: rgba(15,49,89,0.08); --service-nav-border: rgba(15,49,89,0.22);
+      --service-badge-bg: rgba(114,152,189,0.12); --service-badge-bd: rgba(155,182,207,0.70);
     }
-
-    /* fundo da seção de Consultoria na cor da área (preto) */
-    .section-consultoria { background: linear-gradient(160deg, #16181d 0%, #0b0c0f 100%); }
 
     /* atalhos do topo — cada um na cor da sua área */
     .service-nav-item { border-color: var(--service-nav-border) !important; }
@@ -124,8 +124,8 @@
 
     .service-section { border-left: 5px solid var(--service-color); }
     .service-badge { background: var(--service-light); border: 1px solid var(--service-border); color: var(--service-ink); }
-    .service-icon-box { background: var(--service-light); border: 1px solid var(--service-border); }
-    .service-icon-box i, .service-icon-box svg { color: var(--service-ink); }
+    .service-icon-box { background: rgba(251,187,33,0.12); border: 1px solid rgba(251,187,33,0.28); }
+    .service-icon-box i, .service-icon-box svg { color: #925706; }
 
     /* ===== header ilustrado de cada solução ===== */
     .service-header {
@@ -152,13 +152,22 @@
       content: ''; position: absolute; inset: 0;
       background: linear-gradient(to top, rgba(8,32,60,0.92) 0%, rgba(8,32,60,0.15) 55%, rgba(8,32,60,0) 100%);
     }
-    /* dentro do header (fundo escuro) o badge usa fundo neutro e texto na cor da área */
+    /* o badge do título é o único elemento que carrega a cor do segmento */
     .service-header .service-badge {
       color: var(--service-on-dark);
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.18);
+      background: var(--service-badge-bg);
+      border: 1.5px solid var(--service-badge-bd);
+      font-size: 0.875rem;
+      letter-spacing: 0.16em;
+      padding: 0.6rem 1.25rem;
     }
-    .service-header .service-badge i, .service-header .service-badge svg { color: var(--service-on-dark); }
+    .service-header .service-badge i, .service-header .service-badge svg {
+      color: var(--service-on-dark); width: 1.15rem; height: 1.15rem;
+    }
+    .service-header .service-badge .detail-text { font-size: inherit; letter-spacing: inherit; }
+    @media (max-width: 640px) {
+      .service-header .service-badge { font-size: 0.8125rem; letter-spacing: 0.1em; padding: 0.5rem 1rem; }
+    }
 
     @media (min-width: 768px) {
       .service-header { grid-template-columns: 1fr 30%; align-items: stretch; }
@@ -173,18 +182,16 @@
       .service-header-text { padding: 3rem 3rem 3rem 3.5rem; }
     }
     .service-item { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); border: 1px solid rgba(15,49,89,0.06); transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
-    .service-item:hover { background: rgba(255,255,255,0.95); border-color: var(--service-border); transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+    .service-item:hover { background: rgba(255,255,255,0.95); border-color: rgba(251,187,33,0.45); transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
 
     .service-dark-card { background: linear-gradient(135deg, #0f3159, #08203c); border: 1px solid rgba(255,255,255,0.06); }
 
-    .glass-card-service { background: rgba(255,255,255,0.03); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.08); transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
-    .glass-card-service:hover { background: rgba(255,255,255,0.06); border-color: var(--service-border); transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
 
-    .service-divider { height: 4px; background: linear-gradient(90deg, transparent, var(--service-color), transparent); opacity: 0.3; }
+    .service-divider { height: 4px; background: linear-gradient(90deg, transparent, var(--service-color), transparent); opacity: 0.35; }
 
     /* cards da metodologia: hover na cor da área */
     .methodology-card { transition: border-color 0.3s ease; }
-    .methodology-card:hover { border-color: var(--service-border) !important; }
+    .methodology-card:hover { border-color: rgba(251,187,33,0.45) !important; }
   </style>
 </head>
 
@@ -290,18 +297,18 @@
   </section>
 
 
-  <!-- ========== REPRESENTAÇÃO COMERCIAL (AZUL) ========== -->
+  <!-- ========== REPRESENTAÇÃO COMERCIAL (AMARELO) ========== -->
   <section id="representacao" class="bg-white py-24 lg:py-32 grid-bg relative service-representacao">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Service Header -->
       <div class="service-header mb-16" data-aos="fade-up">
         <div class="service-header-text">
-          <div class="inline-flex items-center gap-2 service-badge rounded-full px-4 py-1.5 mb-4">
+          <div class="inline-flex items-center gap-2 service-badge rounded-full mb-5">
             <i data-lucide="handshake" class="w-4 h-4"></i>
-            <span class="detail-text text-xs">Representação Comercial</span>
+            <span class="detail-text">Representação Comercial</span>
           </div>
           <h2 class="font-heading text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white/80 leading-tight mb-4">
-            Expandir mercados exige <span style="color: var(--service-on-dark);">estratégia e relacionamento.</span>
+            Expandir mercados exige <span class="text-gold-300">estratégia e relacionamento.</span>
           </h2>
           <p class="text-white/60 text-base lg:text-lg leading-relaxed max-w-2xl">
             A Master Impulso apoia empresas na abertura de novas oportunidades comerciais e no fortalecimento da presença de marca no mercado.
@@ -353,7 +360,7 @@
             <div class="absolute inset-0" style="background: radial-gradient(ellipse at bottom right, rgba(251,187,33,0.08), transparent 60%);"></div>
             <div class="relative z-10">
               <h4 class="font-heading text-lg font-bold text-white mb-4 flex items-center gap-3">
-                <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background: rgba(251,187,33,0.15); border: 1px solid rgba(251,187,33,0.3);"><i data-lucide="user-check" class="w-4 h-4" style="color: var(--service-on-dark);"></i></div>
+                <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background: rgba(251,187,33,0.12); border: 1px solid rgba(251,187,33,0.28);"><i data-lucide="user-check" class="w-4 h-4" style="color: #fbbb21;"></i></div>
                 Para quem é
               </h4>
               <p class="text-white/60 text-sm leading-relaxed">
@@ -371,21 +378,18 @@
   </section>
 
 
-  <!-- ========== CONSULTORIA ESTRATÉGICA (VERDE) ========== -->
-  <section id="consultoria" class="section-consultoria py-24 lg:py-32 relative overflow-hidden service-consultoria">
-    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/25 to-transparent"></div>
-    <div class="absolute top-40 left-0 w-72 h-72 rounded-full blur-3xl" style="background: rgba(255,255,255,0.06);"></div>
-
+  <!-- ========== CONSULTORIA ESTRATÉGICA (PRETO) ========== -->
+  <section id="consultoria" class="bg-white py-24 lg:py-32 grid-bg relative service-consultoria">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <!-- Service Header -->
       <div class="service-header mb-20" data-aos="fade-up">
         <div class="service-header-text">
-          <div class="inline-flex items-center gap-2 service-badge rounded-full px-4 py-1.5 mb-4">
+          <div class="inline-flex items-center gap-2 service-badge rounded-full mb-5">
             <i data-lucide="lightbulb" class="w-4 h-4"></i>
-            <span class="detail-text text-xs">Consultoria Estratégica</span>
+            <span class="detail-text">Consultoria Estratégica</span>
           </div>
           <h2 class="font-heading text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white/80 leading-tight mb-4">
-            Crescer exige clareza sobre o que precisa ser <span style="color: var(--service-on-dark);">ajustado.</span>
+            Crescer exige clareza sobre o que precisa ser <span class="text-gold-300">ajustado.</span>
           </h2>
           <p class="text-white/60 text-base lg:text-lg leading-relaxed max-w-2xl">
             A Master Impulso identifica gargalos, organiza processos e cria estratégias para melhorar a performance comercial da empresa.
@@ -399,64 +403,64 @@
       <div class="grid lg:grid-cols-2 gap-12 mb-20">
         <!-- Desafios -->
         <div data-aos="fade-right">
-          <h3 class="font-heading text-2xl font-bold text-white mb-8 flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.25);"><i data-lucide="alert-triangle" class="w-4 h-4 text-red-400"></i></div>
+          <h3 class="font-heading text-2xl font-bold text-navy-800 mb-8 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background: rgba(220,38,38,0.10); border: 1px solid rgba(220,38,38,0.22);"><i data-lucide="alert-triangle" class="w-4 h-4 text-red-600"></i></div>
             Principais desafios
           </h3>
           <div class="space-y-3">
-            <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 bg-red-500/10 rounded-lg flex items-center justify-center flex-shrink-0 text-red-400 group-hover:bg-red-500/20 transition-colors"><i data-lucide="x" class="w-4 h-4"></i></span>
-              <p class="text-white/70 text-sm">Crescimento estagnado</p>
+            <div class="service-item rounded-xl p-5 flex items-center gap-4 group">
+              <span class="w-8 h-8 bg-red-600/10 rounded-lg flex items-center justify-center flex-shrink-0 text-red-600 group-hover:bg-red-600/20 transition-colors"><i data-lucide="x" class="w-4 h-4"></i></span>
+              <p class="text-navy-600 text-sm">Crescimento estagnado</p>
             </div>
-            <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 bg-red-500/10 rounded-lg flex items-center justify-center flex-shrink-0 text-red-400 group-hover:bg-red-500/20 transition-colors"><i data-lucide="x" class="w-4 h-4"></i></span>
-              <p class="text-white/70 text-sm">Falta de direcionamento comercial</p>
+            <div class="service-item rounded-xl p-5 flex items-center gap-4 group">
+              <span class="w-8 h-8 bg-red-600/10 rounded-lg flex items-center justify-center flex-shrink-0 text-red-600 group-hover:bg-red-600/20 transition-colors"><i data-lucide="x" class="w-4 h-4"></i></span>
+              <p class="text-navy-600 text-sm">Falta de direcionamento comercial</p>
             </div>
-            <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 bg-red-500/10 rounded-lg flex items-center justify-center flex-shrink-0 text-red-400 group-hover:bg-red-500/20 transition-colors"><i data-lucide="x" class="w-4 h-4"></i></span>
-              <p class="text-white/70 text-sm">Equipes sem processos definidos</p>
+            <div class="service-item rounded-xl p-5 flex items-center gap-4 group">
+              <span class="w-8 h-8 bg-red-600/10 rounded-lg flex items-center justify-center flex-shrink-0 text-red-600 group-hover:bg-red-600/20 transition-colors"><i data-lucide="x" class="w-4 h-4"></i></span>
+              <p class="text-navy-600 text-sm">Equipes sem processos definidos</p>
             </div>
-            <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 bg-red-500/10 rounded-lg flex items-center justify-center flex-shrink-0 text-red-400 group-hover:bg-red-500/20 transition-colors"><i data-lucide="x" class="w-4 h-4"></i></span>
-              <p class="text-white/70 text-sm">Baixa previsibilidade de resultados</p>
+            <div class="service-item rounded-xl p-5 flex items-center gap-4 group">
+              <span class="w-8 h-8 bg-red-600/10 rounded-lg flex items-center justify-center flex-shrink-0 text-red-600 group-hover:bg-red-600/20 transition-colors"><i data-lucide="x" class="w-4 h-4"></i></span>
+              <p class="text-navy-600 text-sm">Baixa previsibilidade de resultados</p>
             </div>
-            <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 bg-red-500/10 rounded-lg flex items-center justify-center flex-shrink-0 text-red-400 group-hover:bg-red-500/20 transition-colors"><i data-lucide="x" class="w-4 h-4"></i></span>
-              <p class="text-white/70 text-sm">Canais comerciais pouco estruturados</p>
+            <div class="service-item rounded-xl p-5 flex items-center gap-4 group">
+              <span class="w-8 h-8 bg-red-600/10 rounded-lg flex items-center justify-center flex-shrink-0 text-red-600 group-hover:bg-red-600/20 transition-colors"><i data-lucide="x" class="w-4 h-4"></i></span>
+              <p class="text-navy-600 text-sm">Canais comerciais pouco estruturados</p>
             </div>
           </div>
         </div>
 
         <!-- O que fazemos -->
         <div data-aos="fade-left" data-aos-delay="200">
-          <h3 class="font-heading text-2xl font-bold text-white mb-8 flex items-center gap-3">
-            <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);"><i data-lucide="check-circle-2" class="w-4 h-4" style="color: var(--service-ink);"></i></div>
+          <h3 class="font-heading text-2xl font-bold text-navy-800 mb-8 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center service-icon-box"><i data-lucide="check-circle-2" class="w-4 h-4"></i></div>
             O que fazemos
           </h3>
           <div class="space-y-3">
-            <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(255,255,255,0.1); color: var(--service-ink);"><i data-lucide="check" class="w-4 h-4"></i></span>
-              <p class="text-white/70 text-sm">Diagnóstico comercial</p>
+            <div class="service-item rounded-xl p-5 flex items-center gap-4 group">
+              <span class="w-8 h-8 service-icon-box rounded-lg flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-4 h-4"></i></span>
+              <p class="text-navy-600 text-sm">Diagnóstico comercial</p>
             </div>
-            <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(255,255,255,0.1); color: var(--service-ink);"><i data-lucide="check" class="w-4 h-4"></i></span>
-              <p class="text-white/70 text-sm">Estruturação comercial</p>
+            <div class="service-item rounded-xl p-5 flex items-center gap-4 group">
+              <span class="w-8 h-8 service-icon-box rounded-lg flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-4 h-4"></i></span>
+              <p class="text-navy-600 text-sm">Estruturação comercial</p>
             </div>
-            <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(255,255,255,0.1); color: var(--service-ink);"><i data-lucide="check" class="w-4 h-4"></i></span>
-              <p class="text-white/70 text-sm">Planejamento estratégico</p>
+            <div class="service-item rounded-xl p-5 flex items-center gap-4 group">
+              <span class="w-8 h-8 service-icon-box rounded-lg flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-4 h-4"></i></span>
+              <p class="text-navy-600 text-sm">Planejamento estratégico</p>
             </div>
-            <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(255,255,255,0.1); color: var(--service-ink);"><i data-lucide="check" class="w-4 h-4"></i></span>
-              <p class="text-white/70 text-sm">Desenvolvimento de mercado</p>
+            <div class="service-item rounded-xl p-5 flex items-center gap-4 group">
+              <span class="w-8 h-8 service-icon-box rounded-lg flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-4 h-4"></i></span>
+              <p class="text-navy-600 text-sm">Desenvolvimento de mercado</p>
             </div>
-            <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(255,255,255,0.1); color: var(--service-ink);"><i data-lucide="check" class="w-4 h-4"></i></span>
-              <p class="text-white/70 text-sm">Posicionamento de marca</p>
+            <div class="service-item rounded-xl p-5 flex items-center gap-4 group">
+              <span class="w-8 h-8 service-icon-box rounded-lg flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-4 h-4"></i></span>
+              <p class="text-navy-600 text-sm">Posicionamento de marca</p>
             </div>
-            <div class="glass-card-service rounded-xl p-5 flex items-center gap-4 group">
-              <span class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors" style="background: rgba(255,255,255,0.1); color: var(--service-ink);"><i data-lucide="check" class="w-4 h-4"></i></span>
-              <p class="text-white/70 text-sm">Otimização de processos comerciais</p>
+            <div class="service-item rounded-xl p-5 flex items-center gap-4 group">
+              <span class="w-8 h-8 service-icon-box rounded-lg flex items-center justify-center flex-shrink-0"><i data-lucide="check" class="w-4 h-4"></i></span>
+              <p class="text-navy-600 text-sm">Otimização de processos comerciais</p>
             </div>
           </div>
         </div>
@@ -464,30 +468,30 @@
 
       <!-- Metodologia Consultoria -->
       <div data-aos="fade-up">
-        <h3 class="font-heading text-2xl font-bold text-white mb-10 text-center">Metodologia</h3>
+        <h3 class="font-heading text-2xl font-bold text-navy-800 mb-10 text-center">Metodologia</h3>
         <div class="flex flex-wrap justify-center gap-4 lg:gap-6">
-          <div class="glass-card-service rounded-xl px-6 py-5 text-center min-w-[140px] group" style="--service-border: rgba(255,255,255,0.4);">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-ink);">01</span>
+          <div class="rounded-xl px-6 py-5 text-center min-w-[140px] group transition-colors service-dark-card methodology-card">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbb21;">01</span>
             <p class="text-white/70 text-sm font-medium">Diagnóstico</p>
           </div>
-          <div class="hidden lg:flex items-center text-white/20"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
-          <div class="glass-card-service rounded-xl px-6 py-5 text-center min-w-[140px] group" style="--service-border: rgba(255,255,255,0.4);">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-ink);">02</span>
+          <div class="hidden lg:flex items-center text-navy-300"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
+          <div class="rounded-xl px-6 py-5 text-center min-w-[140px] group transition-colors service-dark-card methodology-card">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbb21;">02</span>
             <p class="text-white/70 text-sm font-medium">Planejamento</p>
           </div>
-          <div class="hidden lg:flex items-center text-white/20"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
-          <div class="glass-card-service rounded-xl px-6 py-5 text-center min-w-[140px] group" style="--service-border: rgba(255,255,255,0.4);">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-ink);">03</span>
+          <div class="hidden lg:flex items-center text-navy-300"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
+          <div class="rounded-xl px-6 py-5 text-center min-w-[140px] group transition-colors service-dark-card methodology-card">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbb21;">03</span>
             <p class="text-white/70 text-sm font-medium">Implementação</p>
           </div>
-          <div class="hidden lg:flex items-center text-white/20"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
-          <div class="glass-card-service rounded-xl px-6 py-5 text-center min-w-[140px] group" style="--service-border: rgba(255,255,255,0.4);">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-ink);">04</span>
+          <div class="hidden lg:flex items-center text-navy-300"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
+          <div class="rounded-xl px-6 py-5 text-center min-w-[140px] group transition-colors service-dark-card methodology-card">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbb21;">04</span>
             <p class="text-white/70 text-sm font-medium">Monitoramento</p>
           </div>
-          <div class="hidden lg:flex items-center text-white/20"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
-          <div class="glass-card-service rounded-xl px-6 py-5 text-center min-w-[140px] group" style="--service-border: rgba(255,255,255,0.4);">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-ink);">05</span>
+          <div class="hidden lg:flex items-center text-navy-300"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
+          <div class="rounded-xl px-6 py-5 text-center min-w-[140px] group transition-colors service-dark-card methodology-card">
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbb21;">05</span>
             <p class="text-white/70 text-sm font-medium">Evolução contínua</p>
           </div>
         </div>
@@ -496,18 +500,18 @@
   </section>
 
 
-  <!-- ========== TRADE MARKETING (LARANJA) ========== -->
+  <!-- ========== TRADE MARKETING (AZUL) ========== -->
   <section id="trade" class="bg-white py-24 lg:py-32 grid-bg relative service-trade">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Service Header -->
       <div class="service-header mb-20" data-aos="fade-up">
         <div class="service-header-text">
-          <div class="inline-flex items-center gap-2 service-badge rounded-full px-4 py-1.5 mb-4">
+          <div class="inline-flex items-center gap-2 service-badge rounded-full mb-5">
             <i data-lucide="store" class="w-4 h-4"></i>
-            <span class="detail-text text-xs">Trade Marketing</span>
+            <span class="detail-text">Trade Marketing</span>
           </div>
           <h2 class="font-heading text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white/80 leading-tight mb-4">
-            Execução eficiente no ponto de venda gera <span style="color: var(--service-on-dark);">resultado.</span>
+            Execução eficiente no ponto de venda gera <span class="text-gold-300">resultado.</span>
           </h2>
           <p class="text-white/60 text-base lg:text-lg leading-relaxed max-w-2xl">
             A Master Impulso estrutura operações de trade marketing para melhorar presença, exposição e performance no varejo.
@@ -567,23 +571,23 @@
             <div class="absolute inset-0" style="background: radial-gradient(ellipse at top left, rgba(15,49,89,0.08), transparent 60%);"></div>
             <div class="relative z-10 space-y-5">
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(15,49,89,0.12); border: 1px solid rgba(15,49,89,0.25);"><i data-lucide="user-check" class="w-5 h-5" style="color: var(--service-on-dark);"></i></div>
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(251,187,33,0.12); border: 1px solid rgba(251,187,33,0.28);"><i data-lucide="user-check" class="w-5 h-5" style="color: #fbbb21;"></i></div>
                 <div><p class="text-white font-semibold mb-1">Promotores preparados</p><p class="text-white/50 text-sm">Equipe treinada e capacitada</p></div>
               </div>
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(15,49,89,0.12); border: 1px solid rgba(15,49,89,0.25);"><i data-lucide="bar-chart-3" class="w-5 h-5" style="color: var(--service-on-dark);"></i></div>
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(251,187,33,0.12); border: 1px solid rgba(251,187,33,0.28);"><i data-lucide="bar-chart-3" class="w-5 h-5" style="color: #fbbb21;"></i></div>
                 <div><p class="text-white font-semibold mb-1">Execução baseada em indicadores</p><p class="text-white/50 text-sm">Dados orientando cada ação</p></div>
               </div>
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(15,49,89,0.12); border: 1px solid rgba(15,49,89,0.25);"><i data-lucide="heart-handshake" class="w-5 h-5" style="color: var(--service-on-dark);"></i></div>
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(251,187,33,0.12); border: 1px solid rgba(251,187,33,0.28);"><i data-lucide="heart-handshake" class="w-5 h-5" style="color: #fbbb21;"></i></div>
                 <div><p class="text-white font-semibold mb-1">Relacionamento próximo com o varejo</p><p class="text-white/50 text-sm">Parceria sólida com PDVs</p></div>
               </div>
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(15,49,89,0.12); border: 1px solid rgba(15,49,89,0.25);"><i data-lucide="target" class="w-5 h-5" style="color: var(--service-on-dark);"></i></div>
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(251,187,33,0.12); border: 1px solid rgba(251,187,33,0.28);"><i data-lucide="target" class="w-5 h-5" style="color: #fbbb21;"></i></div>
                 <div><p class="text-white font-semibold mb-1">Foco em performance</p><p class="text-white/50 text-sm">Resultados mensuráveis</p></div>
               </div>
               <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(15,49,89,0.12); border: 1px solid rgba(15,49,89,0.25);"><i data-lucide="refresh-cw" class="w-5 h-5" style="color: var(--service-on-dark);"></i></div>
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(251,187,33,0.12); border: 1px solid rgba(251,187,33,0.28);"><i data-lucide="refresh-cw" class="w-5 h-5" style="color: #fbbb21;"></i></div>
                 <div><p class="text-white font-semibold mb-1">Melhoria contínua da operação</p><p class="text-white/50 text-sm">Evolução constante</p></div>
               </div>
             </div>
@@ -596,32 +600,32 @@
         <h3 class="font-heading text-2xl font-bold text-navy-800 mb-10 text-center">Metodologia</h3>
         <div class="flex flex-wrap justify-center gap-4 lg:gap-6">
           <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card methodology-card">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-on-dark);">01</span>
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbb21;">01</span>
             <p class="text-white/70 text-sm font-medium">Diagnóstico</p>
           </div>
           <div class="hidden lg:flex items-center text-navy-300"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
           <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card methodology-card">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-on-dark);">02</span>
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbb21;">02</span>
             <p class="text-white/70 text-sm font-medium">Planejamento</p>
           </div>
           <div class="hidden lg:flex items-center text-navy-300"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
           <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card methodology-card">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-on-dark);">03</span>
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbb21;">03</span>
             <p class="text-white/70 text-sm font-medium">Treinamento</p>
           </div>
           <div class="hidden lg:flex items-center text-navy-300"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
           <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card methodology-card">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-on-dark);">04</span>
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbb21;">04</span>
             <p class="text-white/70 text-sm font-medium">Execução</p>
           </div>
           <div class="hidden lg:flex items-center text-navy-300"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
           <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card methodology-card">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-on-dark);">05</span>
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbb21;">05</span>
             <p class="text-white/70 text-sm font-medium">Relatórios</p>
           </div>
           <div class="hidden lg:flex items-center text-navy-300"><i data-lucide="chevron-right" class="w-5 h-5"></i></div>
           <div class="rounded-xl px-6 py-5 text-center min-w-[130px] group transition-colors service-dark-card methodology-card">
-            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: var(--service-on-dark);">06</span>
+            <span class="font-heading text-3xl font-bold block mb-2 group-hover:scale-110 transition-transform" style="color: #fbbb21;">06</span>
             <p class="text-white/70 text-sm font-medium">Otimização contínua</p>
           </div>
         </div>
